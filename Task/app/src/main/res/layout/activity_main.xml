@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:scrollbarStyle="outsideOverlay"
+        tools:context=".ModifyTask">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="500dp"
+            tools:context=".MainActivity"
+            android:id="@+id/rr">
+
+            <ListView
+
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:divider="@color/grey"
+                android:background="@drawable/cardplus"
+                android:listSelector="@drawable/listselectedbackground"
+                tools:listitem="@layout/list_item" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/list"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/liner">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"/>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
